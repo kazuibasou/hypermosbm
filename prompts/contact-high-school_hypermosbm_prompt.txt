@@ -1,0 +1,291 @@
+You are an expert in social network analysis.
+I will provide you with data on 9 communities of individuals, extracted from a contact network using a machine learning model. Your task is to analyze this data, infer the social group that each community represents, and provide a suitable English label for each, along with your reasoning.
+
+**Analysis Steps:**
+1.  Analyze the "Representative Members List" for each community. This list shows the metadata (e.g., class affiliation) of members who have a membership probability of 90% or higher for that community.
+2.  Based on this information, interpret what kind of group each community is (e.g., 'MP', 'Mainly Class 2BIO1', 'Mixed Group of MP*1 and MP*2'). Then, create your response following the requirements below.
+
+**Output Requirements:**
+*   **Label:** A concise English label that represents the nature of the community. If a metadata class name accurately describes the community, prioritize using that name without modification. If there are two or more communities with the same label, differentiate them (e.g., 'First Group ...', 'Second Group ...').
+*   **Composition:** Describe which classes primarily constitute this community, based on the representative members list.
+*   **Rationale:** Explain your reasoning for assigning the label, specifically based on the class composition of the representative members.
+
+**Output Format:**
+Strictly adhere to the following Markdown format for each community.
+
+```markdown
+### Community Labeling Results
+
+**Community 0**
+*   **Label:** [Enter the English label here]
+*   **Composition:** [Describe the class composition]
+*   **Rationale:** [Provide your reasoning]
+
+---
+
+**Community 1**
+*   **Label:** [Enter the English label here]
+*   **Composition:** [Describe the class composition]
+*   **Rationale:** [Provide your reasoning]
+
+---
+(... continue for all communities up to Community 8 ...)
+
+---
+
+**Summary Output:**
+Finally, provide a summary of all community labels in the following Python dictionary format.
+
+```python
+{
+    0: "Label for Community 0",
+    1: "Label for Community 1",
+    2: "Label for Community 2",
+    ...
+    # (continue up to Community 8)
+}
+
+### **Data for Analysis**
+---
+
+Representative Members List for Each Community
+
+**Community 0**
+
+*   **Representative members (Membership Probability >= 0.9): 23 members found.**
+    1. (Prob: 1.000) PC*
+    2. (Prob: 1.000) PC*
+    3. (Prob: 1.000) PC*
+    4. (Prob: 1.000) PC*
+    5. (Prob: 1.000) PC*
+    6. (Prob: 1.000) PC*
+    7. (Prob: 1.000) PC*
+    8. (Prob: 1.000) PC*
+    9. (Prob: 1.000) PC*
+    10. (Prob: 1.000) PC*
+    11. (Prob: 0.977) PC*
+    12. (Prob: 0.965) PC*
+    13. (Prob: 0.965) PC*
+    14. (Prob: 0.962) PC*
+    15. (Prob: 0.953) PC*
+    16. (Prob: 0.950) PC*
+    17. (Prob: 0.937) PC*
+    18. (Prob: 0.931) PC*
+    19. (Prob: 0.925) PC*
+    20. (Prob: 0.920) PC*
+    21. (Prob: 0.907) PC*
+    22. (Prob: 0.906) PC*
+    23. (Prob: 0.903) PC*
+
+---
+
+**Community 1**
+
+*   **Representative members (Membership Probability >= 0.9): 25 members found.**
+    1. (Prob: 1.000) PSI*
+    2. (Prob: 1.000) PSI*
+    3. (Prob: 1.000) PSI*
+    4. (Prob: 1.000) PSI*
+    5. (Prob: 1.000) PSI*
+    6. (Prob: 1.000) PSI*
+    7. (Prob: 1.000) PSI*
+    8. (Prob: 1.000) PSI*
+    9. (Prob: 1.000) PSI*
+    10. (Prob: 1.000) PSI*
+    11. (Prob: 1.000) PSI*
+    12. (Prob: 0.984) PSI*
+    13. (Prob: 0.983) PSI*
+    14. (Prob: 0.962) PSI*
+    15. (Prob: 0.959) PSI*
+    16. (Prob: 0.957) PSI*
+    17. (Prob: 0.951) PSI*
+    18. (Prob: 0.949) PSI*
+    19. (Prob: 0.942) PSI*
+    20. (Prob: 0.942) PSI*
+    21. (Prob: 0.935) PSI*
+    22. (Prob: 0.932) PSI*
+    23. (Prob: 0.927) PSI*
+    24. (Prob: 0.921) PSI*
+    25. (Prob: 0.920) PSI*
+
+---
+
+**Community 2**
+
+*   **Representative members (Membership Probability >= 0.9): 24 members found.**
+    1. (Prob: 1.000) MP*1
+    2. (Prob: 1.000) MP*1
+    3. (Prob: 1.000) MP*1
+    4. (Prob: 1.000) MP*1
+    5. (Prob: 1.000) MP*1
+    6. (Prob: 1.000) MP*1
+    7. (Prob: 1.000) MP*1
+    8. (Prob: 1.000) MP*1
+    9. (Prob: 1.000) MP*1
+    10. (Prob: 0.973) MP*1
+    11. (Prob: 0.969) MP*1
+    12. (Prob: 0.962) MP*1
+    13. (Prob: 0.959) MP*1
+    14. (Prob: 0.952) MP*1
+    15. (Prob: 0.950) MP*1
+    16. (Prob: 0.933) MP*1
+    17. (Prob: 0.932) MP*1
+    18. (Prob: 0.932) MP*1
+    19. (Prob: 0.927) MP*1
+    20. (Prob: 0.924) MP*1
+    21. (Prob: 0.920) MP*1
+    22. (Prob: 0.916) MP*1
+    23. (Prob: 0.912) MP*1
+    24. (Prob: 0.909) MP*1
+
+---
+
+**Community 3**
+
+*   **Representative members (Membership Probability >= 0.9): 15 members found.**
+    1. (Prob: 1.000) MP
+    2. (Prob: 1.000) MP
+    3. (Prob: 1.000) MP
+    4. (Prob: 1.000) MP
+    5. (Prob: 1.000) MP
+    6. (Prob: 1.000) MP
+    7. (Prob: 0.978) MP
+    8. (Prob: 0.972) MP
+    9. (Prob: 0.967) MP
+    10. (Prob: 0.966) MP
+    11. (Prob: 0.963) MP
+    12. (Prob: 0.959) MP
+    13. (Prob: 0.951) MP
+    14. (Prob: 0.937) MP
+    15. (Prob: 0.918) MP
+
+---
+
+**Community 4**
+
+*   **Representative members (Membership Probability >= 0.9): 20 members found.**
+    1. (Prob: 1.000) 2BIO2
+    2. (Prob: 1.000) 2BIO2
+    3. (Prob: 1.000) 2BIO2
+    4. (Prob: 1.000) 2BIO2
+    5. (Prob: 1.000) 2BIO2
+    6. (Prob: 1.000) 2BIO2
+    7. (Prob: 0.989) 2BIO2
+    8. (Prob: 0.975) 2BIO2
+    9. (Prob: 0.968) 2BIO2
+    10. (Prob: 0.964) 2BIO2
+    11. (Prob: 0.964) 2BIO2
+    12. (Prob: 0.956) 2BIO2
+    13. (Prob: 0.954) 2BIO2
+    14. (Prob: 0.952) 2BIO2
+    15. (Prob: 0.950) 2BIO2
+    16. (Prob: 0.948) 2BIO2
+    17. (Prob: 0.941) 2BIO2
+    18. (Prob: 0.927) 2BIO2
+    19. (Prob: 0.919) 2BIO2
+    20. (Prob: 0.904) 2BIO2
+
+---
+
+**Community 5**
+
+*   **Representative members (Membership Probability >= 0.9): 26 members found.**
+    1. (Prob: 1.000) PC
+    2. (Prob: 1.000) PC
+    3. (Prob: 1.000) PC
+    4. (Prob: 1.000) PC
+    5. (Prob: 1.000) PC
+    6. (Prob: 1.000) PC
+    7. (Prob: 1.000) PC
+    8. (Prob: 1.000) PC
+    9. (Prob: 1.000) PC
+    10. (Prob: 1.000) PC
+    11. (Prob: 0.974) PC
+    12. (Prob: 0.973) PC
+    13. (Prob: 0.969) PC
+    14. (Prob: 0.961) PC
+    15. (Prob: 0.953) PC
+    16. (Prob: 0.953) PC
+    17. (Prob: 0.952) PC
+    18. (Prob: 0.950) PC
+    19. (Prob: 0.949) PC
+    20. (Prob: 0.947) PC
+    21. (Prob: 0.936) PC
+    22. (Prob: 0.928) PC
+    23. (Prob: 0.924) PC
+    24. (Prob: 0.923) PC
+    25. (Prob: 0.921) PC
+    26. (Prob: 0.902) PC
+
+---
+
+**Community 6**
+
+*   **Representative members (Membership Probability >= 0.9): 21 members found.**
+    1. (Prob: 1.000) 2BIO1
+    2. (Prob: 1.000) 2BIO1
+    3. (Prob: 1.000) 2BIO1
+    4. (Prob: 1.000) 2BIO1
+    5. (Prob: 1.000) 2BIO1
+    6. (Prob: 1.000) 2BIO1
+    7. (Prob: 1.000) 2BIO1
+    8. (Prob: 1.000) 2BIO1
+    9. (Prob: 1.000) 2BIO1
+    10. (Prob: 0.978) 2BIO1
+    11. (Prob: 0.978) 2BIO1
+    12. (Prob: 0.967) 2BIO1
+    13. (Prob: 0.955) 2BIO1
+    14. (Prob: 0.953) 2BIO1
+    15. (Prob: 0.951) 2BIO1
+    16. (Prob: 0.948) 2BIO1
+    17. (Prob: 0.939) 2BIO1
+    18. (Prob: 0.936) 2BIO1
+    19. (Prob: 0.931) 2BIO1
+    20. (Prob: 0.909) 2BIO1
+    21. (Prob: 0.903) 2BIO1
+
+---
+
+**Community 7**
+
+*   **Representative members (Membership Probability >= 0.9): 18 members found.**
+    1. (Prob: 1.000) 2BIO3
+    2. (Prob: 1.000) 2BIO3
+    3. (Prob: 1.000) 2BIO3
+    4. (Prob: 1.000) 2BIO3
+    5. (Prob: 1.000) 2BIO3
+    6. (Prob: 1.000) 2BIO3
+    7. (Prob: 0.979) 2BIO3
+    8. (Prob: 0.976) 2BIO3
+    9. (Prob: 0.971) 2BIO3
+    10. (Prob: 0.957) 2BIO3
+    11. (Prob: 0.951) 2BIO3
+    12. (Prob: 0.940) 2BIO3
+    13. (Prob: 0.931) 2BIO3
+    14. (Prob: 0.927) 2BIO3
+    15. (Prob: 0.925) 2BIO3
+    16. (Prob: 0.923) 2BIO3
+    17. (Prob: 0.920) 2BIO3
+    18. (Prob: 0.908) 2BIO3
+
+---
+
+**Community 8**
+
+*   **Representative members (Membership Probability >= 0.9): 14 members found.**
+    1. (Prob: 1.000) MP*2
+    2. (Prob: 1.000) MP*2
+    3. (Prob: 1.000) MP*2
+    4. (Prob: 0.968) MP*2
+    5. (Prob: 0.956) MP*2
+    6. (Prob: 0.955) MP*2
+    7. (Prob: 0.946) MP*2
+    8. (Prob: 0.941) MP*2
+    9. (Prob: 0.940) MP*2
+    10. (Prob: 0.923) MP*2
+    11. (Prob: 0.918) MP*2
+    12. (Prob: 0.911) MP*2
+    13. (Prob: 0.904) MP*2
+    14. (Prob: 0.901) MP*2
+
+Your response:
