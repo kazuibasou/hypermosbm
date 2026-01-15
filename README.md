@@ -3,25 +3,6 @@ HyperMOSBM <br/>
 <i>Learning Multi-Order Block Structure in Higher-Order Networks</i>
 </h1>
 
-<p align="center">
-<i>A hypergraph multi-order stochastic blockmodel</i>
-</p>
-
-<p align="center">
-<a href="https://github.com/kazuibasou/hypermosbm/blob/main/LICENSE" target="_blank">
-<img alt="License: MIT" src="https://img.shields.io/github/license/kazuibasou/hypermosbm">
-</a>
-
-<a href="https://www.python.org/" target="_blank">
-<img alt="Made with Python" src="https://img.shields.io/badge/made%20with-python-1f425f.svg">
-</a>
-
-<a href="https://arxiv.org/abs/2511.21350" target="_blank">
-<img alt="ARXIV: 2511.21350" src="https://img.shields.io/badge/arXiv-2511.21350-red.svg">
-</a>
-
-</p>
-
 ![Graphical abstract](graphical_abstract.png)
 
 This repository provides the code for the paper: **"Learning Multi-Order Block Structure in Higher-Order Networks"**.
