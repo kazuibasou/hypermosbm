@@ -22,7 +22,7 @@ HyperMOSBM <br/>
 
 </p>
 
-![Graphical abstract](graphical_abstract.jpg)
+![Graphical abstract](graphical_abstract.png)
 
 This repository provides the code for the paper: **"Learning Multi-Order Block Structure in Higher-Order Networks"**.
 
